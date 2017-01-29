@@ -1,32 +1,32 @@
 <html>
     <head>
         <title> Ryan Clough </title>
-        
+
         <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        
+
         <script src="scripts/particles.js"></script>
-      
-         <!-- https://digital.scotch.io/ -->   
-         <!-- http://www.boy-coy.com/ -->   
-        
+
+         <!-- https://digital.scotch.io/ -->
+         <!-- http://www.boy-coy.com/ -->
+
         <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,900,700,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="dist/index.css" rel="stylesheet" type="text/css" />
-        
-        
+
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href="favicon.png" />
         <meta name="description" content="Hi, my name is Ryan Clough and this is my personal website showing off what i have done in the past few years.">
-        
+
         <!--test-->
         <script type="text/javascript">
             $(document).ready(function(){
                 // init controller
                 var controller = new ScrollMagic.Controller();
-                
+
                 var tween = new TimelineMax()
 					.add([
 						TweenMax.to("#page4 .wavesholder1 .shape", 1, { x: "-10%", ease: Linear.easeNone}),
@@ -35,7 +35,7 @@
 						TweenMax.to("#page4 .wavesholder2 .container", 1, { y: "-200px", ease: Linear.easeNone}),
 						TweenMax.to("#page4 .wavesholder3 .container", 1, { y: "-300px", ease: Linear.easeNone})
 					]);
-                
+
                 //Waves
                 new ScrollMagic.Scene({
                     triggerElement: "#page3",
@@ -43,26 +43,25 @@
                 })
 					.setTween(tween)
 					.addTo(controller);
-			
+
 				//Text
 				var tween = new TimelineMax()
 					.add([
 						TweenMax.to("#page2 .line-1", 1, { opacity: 0.7, x: "+5%", ease: Linear.easeNone}),
 						TweenMax.to("#page2 .line-2", 2, { opacity: 0.7, x: "+5%", ease: Linear.easeNone}),
-						TweenMax.to("#page2 .line-3", 3, { opacity: 0.7, x: "+5%", ease: Linear.easeNone}),
 						TweenMax.to("#page2 .seperator", 4, { opacity: 0.7, x: "+40%", ease: Linear.easeNone}),
 						TweenMax.to("#page2 .blurb p", 5, { opacity: 0.7, x: "+5%", ease: Linear.easeNone})
 					]);
-				
-				
+
+
 				new ScrollMagic.Scene({
                     triggerElement: "#page2",
                     duration: 400
                 })
 					.setTween(tween)
 					.addTo(controller);
-					
-				
+
+
 				var tween = new TimelineMax()
 					.add([
 						TweenMax.to("#page1 .line-1", 1, { opacity: 0, x: "+200%", ease: Linear.easeNone}),
@@ -70,40 +69,40 @@
 						TweenMax.to("#page1 .line-3", 3, { opacity: 0, x: "+200%", ease: Linear.easeNone}),
 						TweenMax.to("#page1 .line-4", 4, { opacity: 0, x: "+200%", ease: Linear.easeNone})
 					]);
-				
+
 				new ScrollMagic.Scene({
                     duration: 4000
                 })
 					.setTween(tween)
 					.addTo(controller);
-					
-					
+
+
 				$("#stage").attr({
 				    width: $("body").width(),
 				    height: $("body").height()
 				});
-				
-				
+
+
 				$(".header .nav a").on("click", function(e){
 				    var t = $(e.currentTarget);
 				    var toE = $( t.attr("href") ).offset().top;
-				    
+
 				    $("body").animate({
 				        scrollTop: toE
 				    }, 700);
-				    
+
 				    e.preventDefault();
 				    return false;
 				});
-				
+
 				//particlesInit();
-				
+
             });
-            
-            
+
+
         </script>
-        
-        
+
+
     </head>
     <body>
         <div id="page1" class="page">
@@ -121,24 +120,23 @@
                     </div>
                 </div>
             </div>
-            
+
              <div class="pageCenter">
                 <span class="item line-1"> "The internet has always been, </span>
                 <span class="item line-2"> and always will be a, </span>
                 <span class="item line-3"> magic box." </span>
                 <span class="item line-4"> ~ Marc Andreesse </span>
             </div>
-            
+
             <div class="particles">
                 <canvas id="stage"></canvas>
             </div>
-           
+
         </div>
         <div id="page2" class="page">
             <div class="pageCenter">
                 <span class="item line-1"> Ryan Clough </span>
-                <span class="item line-2"> Web Application Developer & </span>
-                <span class="item line-3"> Web Developer </span>
+                <span class="item line-2"> Software Engineer </span>
                 <div class="seperator"></div>
                 <div class="blurb">
                     <p> Hi, my name is Ryan and I'm a Website Developer. I work on many </p>
@@ -149,9 +147,9 @@
         <div id="page3" class="page">
             <!-- add some parallax moving part.... -->
              <div class="mountains"></div>
-             
-             
-             
+
+
+
              <div class="pageCenter">
                 <div class="exp">
                     <h3> Experience </h3>
@@ -159,11 +157,11 @@
                     <p> I have had the plesure to create with </p>
                     <p> the following companys and individuals in the past. </p>
                 </div>
-            
+
                 <div class="grid">
                     <div>
                         <div>
-                            <img src="http://ryanclough.co.nz/images/gf-logo.png" />
+                            <img src="http://ryanc1256.github.com/images/gf-logo.png" />
                         </div>
                         <div>
                             <img src="https://avatars1.githubusercontent.com/u/5012555?v=3&s=84" />
@@ -171,17 +169,17 @@
                     </div>
                     <div>
                         <div>
-                            <img src="images/logos/pricespy.png" />
+                            <img src="http://ryanc1256.github.com/images/logos/pricespy.png" />
                         </div>
                         <div>
                             <img src="https://d13yacurqjgara.cloudfront.net/users/94232/avatars/small/logo_headwhite.png?1361382665" />
                         </div>
                     </div>
-                    
+
                     <a href="#page4" class="worktogether"> Let's work together! <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
                 </div>
              </div>
-             
+
         </div>
         <!-- FOOTER -->
         <div id="page4" class="page">
@@ -202,8 +200,8 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
             <div class="pageCenter">
                 <div class="left">
                     <h3> Contact Me </h3>
@@ -214,29 +212,29 @@
                         <input type="submit" value="Send!"/>
                     </form>
                 </div>
-                
+
                 <div class="right">
-                    <p>I am open for business.</p> 
+                    <p>I am open for business.</p>
                     <p>Feel free to drop me a line or send your brief.</p>
-                     
+
                     <span>
                         <i class="fa fa-envelope-o"></i>
                         <a href="mailto:me@ryanclough.co.nz" target="_blank"> me@ryanclough.co.nz</a>
                     </span>
-                     
+
                     <span>
                         <i class="fa fa-map"></i>
                         <span>Wellington, New Zealand</span>
                     </span>
-                    
-                    
+
+
                 </div>
-                
+
                 <div class="clearfix"></div>
-                
+
             </div>
-            
-            
+
+
             <div class="bottom">
                 <p> &copy 2016 Ryan Clough </p>
             </div>
